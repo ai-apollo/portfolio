@@ -1,15 +1,9 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { conditionalComponentTagger } from "./src/core/conditionalComponentTagger";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    conditionalComponentTagger({
-      enabled: process.env.NODE_ENV === "development",
-    }),
-  ],
+  plugins: [react()],
   base: "/portfolio/",
   server: {
     host: "0.0.0.0",
